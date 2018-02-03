@@ -5,7 +5,6 @@
 *::before{
   box-sizing: border-box;
 }
-
 .beCircle{
     border-radius: 50%;
 }
@@ -25,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .head{
   width: 314px;
@@ -196,7 +196,6 @@
   left: 43px;
   top: 177px;
   overflow: hidden;
-  background: #E80115;
   border-bottom-left-radius:70%;
 }
 .inner-left::before{
@@ -214,11 +213,9 @@
   width: 115px;
   height: 16px;
   position: absolute;
-/*   border: 1px solid blue; */
   right: 43px;
   top: 177px;
   overflow: hidden;
-/*   background: red; */
   border-bottom-right-radius:70%;
 }
 .inner-right::before{
