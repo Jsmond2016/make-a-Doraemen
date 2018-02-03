@@ -390,8 +390,9 @@
 }
 .pocket-wrapper{
   width: 180px;
-  height: 150px;
+  height: 130px;
   position: absolute;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid black;
@@ -399,8 +400,8 @@
   background: white;
 }
 .pocket-wrapper > .pocket{
-  width: 150px;
-  height: 50px;
+  width: 140px;
+  height: 40px;
   position: absolute;
   left: 50%;
   top: 70px;
@@ -409,10 +410,105 @@
   border-radius: 0 0 70% 70%;
   background: white;
 }
-
-
-
-
+.arm-left{
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-153px) rotate(-30deg);
+  border-radius: 20% 0 0 20%;
+  background: #029FE3;
+}
+.hand-left{
+  width: 45px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-180px);
+  background:  white;
+}
+.arm-right{
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: -25px;
+  right: 50%;
+  transform: translateX(153px) rotate(30deg);
+  border-radius: 0 20% 20% 0;
+  background: #029FE3;
+}
+.hand-right{
+  width: 45px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -55px;
+  right: 50%;
+  transform: translateX(180px);
+  background:  white;
+}
+.shank{
+  width: 200px;
+  height: 50px;
+  border: 2px solid black;
+  border-top-color:transparent;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #029FE3 ;
+  overflow: hidden;
+}
+.circle5{
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50% ;
+  background: white;
+  border-color:black black white white;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+.feet > .foot.left{
+  width: 130px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius:50px/30px ;;
+  position: absolute;
+  bottom: -80px;
+  right: 50%;
+  transform: translateX(-10px) rotate(-5deg);
+}
+.feet > .foot.right{
+  width: 130px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50px/30px ;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(10px) rotate(5deg);
+}
+.hiddenLine{
+  width: 27px;
+  height: 0;
+  border: 1.5px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: -148px;
+  transform: translateX(-50%);
+  
+}
 
 
 
