@@ -1,21 +1,34 @@
-   *{
+*{
   margin: 0;
   padding: 0;
 }
 *::before{
   box-sizing: border-box;
 }
+
+.beCircle{
+    border-radius: 50%;
+}
+.center-left{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center-right{
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
 .wrapper{
- /* border: 1px solid red;*/
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .head{
   width: 314px;
   height: 314px;
-  border-radius: 50%;
   background: #029FE3;
   border: 1px solid  black;
   position: relative;
@@ -62,12 +75,9 @@
 
 .face{
   width: 275px;
-  height: 230px;
+  height: 247px;
   border: 2px solid black;
-  position: absolute;
   top: 60px;
-  right: 50%;
-  transform: translateX(50%);
   border-radius: 40% 40% 50% 50%;
   background: white;
 }
@@ -75,12 +85,8 @@
   width: 41px;
   height: 41px;
   border: 2px solid black;
-  background: #D80517;
-  border-radius: 50%;
-  position: absolute;
+  background: #D80517; 
   top: 77px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .nose::before{
   content: '';
@@ -99,10 +105,8 @@
 .beard.center{
   width: 0;
   height: 55px;
-  position: absolute;
   top:122px;
-  left: 50%;
-  transform: translateX(-50%);
+  border-radius: 0;
 }
 .beard.left-top{
   width: 80px;
@@ -172,18 +176,13 @@
   height: 117px;
   border: 2px solid black;
   border-color: black transparent transparent transparent;
-  position: absolute;
-  left: 50%;
   top: 178px;
-  left: 50%;
-  transform: translateX(-50%);
   overflow: hidden;
 }
 .mouth{
   width: 230px;
   height: 233px;
   border: 2px solid black;
-  border-radius: 50%;
   background: #E80115;
   transform: translateY(-56%);
   overflow: hidden; 
@@ -195,7 +194,7 @@
   height: 16px;
   position: absolute;
   left: 43px;
-  top: 178px;
+  top: 177px;
   overflow: hidden;
   background: #E80115;
   border-bottom-left-radius:70%;
@@ -217,7 +216,7 @@
   position: absolute;
 /*   border: 1px solid blue; */
   right: 43px;
-  top: 178px;
+  top: 177px;
   overflow: hidden;
 /*   background: red; */
   border-bottom-right-radius:70%;
@@ -241,7 +240,7 @@
   border: 2px solid black;
   border-radius: 50% 0 0 50%;
   position: absolute;
-  top: 180px;
+  top: 188px;
   left: 50%;
   transform: translateX(-70%) rotate(30deg);
 }
@@ -252,7 +251,7 @@
   border: 2px solid black;
   border-radius: 0 50% 50% 0;
   position: absolute;
-  top: 180px;
+  top: 188px;
   right: 50%;
   transform: translateX(70%) rotate(-30deg);
 }
@@ -263,7 +262,7 @@
   height: 150px;
   background: black;
   position: absolute;
-  top: 189px;
+  top: 197px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0 0 50%  50%;
@@ -275,10 +274,7 @@
   width: 230px;
   height: 45px; 
 /*   border: 1px solid  black; */
-  position: absolute;
-  left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
   background: transparent;
   overflow: hidden;
 }
@@ -286,11 +282,7 @@
 .neck> .circle1{
   width: 290px;
   height:138px;
-  border-radius: 50%;
-  position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   background: transparent;
   border: 2px solid black;
 }
@@ -298,24 +290,14 @@
 .neck> .circle2{
   width: 300px;
   height: 150px;
-  border-radius: 50%;
-  position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background: transparent;
   border: 20px solid #D80517;
 }
 .neck> .circle3{
-
   width: 300px;
   height:138px;
-  border-radius: 50%;
-  position: absolute;
   bottom: -2px;
-  left: 50%;
-  background: green;
-  transform: translateX(-50%);
   background: transparent;
   border: 2px solid black;
 }
@@ -324,33 +306,21 @@
   width: 56px;
   height: 56px;
   background: #F5D600;
-  border-radius: 50%;
-  position: absolute;
   bottom: -45px;;
-  left: 50%;
-  transform: translateX(-50%);
   border: 2px solid black;
   overflow: hidden;
-}
-.section> .bell >.circle3{
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 10px;
-  transform: translateX(-50%)
 }
 .section> .bell >.circle4{
   width: 100px;
   height: 100px;
   border: 2px solid black;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 20px;
-  transform: translateX(-50%)
+  top: 10px;
+}
+.section> .bell >.circle5{
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  top: 17px;
 }
 
 .section> .bell::before{
@@ -367,56 +337,45 @@
   background: white;
 }
 .section> .bell::after{
-  content: '';
-  display: block;
-  width: 0;
-  height: 15px;
-  border: 0.5px solid black;
-  position: absolute;
-  top: 42px;
-  left: 50%;
-  transform: translateX(-50%);
+    border: none;
+    content: '';
+    display: block;
+    width: 1.2px;
+    height: 15px;
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
 }
 .dbody{
   width: 220px;
   height: 130px;
   border: 2px solid black;
-  position: absolute;
   bottom: -110px;
-  left: 50%;
-  transform: translateX(-50%);
   background: #029FE3;
   border-radius: 40px/90px;
 }
 .pocket-wrapper{
   width: 180px;
-  height: 130px;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 133px;
+  top: 3px;
   border: 2px solid black;
-  border-radius: 50%;
   background: white;
 }
 .pocket-wrapper > .pocket{
   width: 140px;
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  top: 70px;
-  transform: translateX(-50%);
+  height: 52px;
+  top: 66px;
   border: 2px solid black;
-  border-radius: 0 0 70% 70%;
+  border-radius: 0 0 50% 50%;
   background: white;
 }
 .arm-left{
   width: 80px;
   height: 40px;
   border: 2px solid black;
-  position: absolute;
   bottom: -25px;
-  left: 50%;
   transform: translateX(-153px) rotate(-30deg);
   border-radius: 20% 0 0 20%;
   background: #029FE3;
@@ -425,20 +384,15 @@
   width: 45px;
   height: 45px;
   border: 2px solid black;
-  border-radius: 50%;
-  position: absolute;
   bottom: -55px;
-  left: 50%;
-  transform: translateX(-180px);
+  transform: translateX(-178px);
   background:  white;
 }
 .arm-right{
   width: 80px;
   height: 40px;
   border: 2px solid black;
-  position: absolute;
   bottom: -25px;
-  right: 50%;
   transform: translateX(153px) rotate(30deg);
   border-radius: 0 20% 20% 0;
   background: #029FE3;
@@ -447,36 +401,27 @@
   width: 45px;
   height: 45px;
   border: 2px solid black;
-  border-radius: 50%;
-  position: absolute;
   bottom: -55px;
-  right: 50%;
-  transform: translateX(180px);
+  transform: translateX(178px);
   background:  white;
 }
 .shank{
   width: 200px;
-  height: 50px;
+  height: 55px;
   border: 2px solid black;
   border-top-color:transparent;
-  border-radius: 20px;
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
+  border-radius: 30px;
+  bottom: -44px;
   background: #029FE3 ;
   overflow: hidden;
 }
-.circle5{
+.circle6{
   width: 30px;
   height: 30px;
   border: 2px solid black;
-  border-radius: 50% ;
   background: white;
   border-color:black black white white;
-  position: absolute;
   bottom: -18px;
-  left: 50%;
   transform: translateX(-50%) rotate(-45deg);
 }
 .feet > .foot.left{
@@ -484,9 +429,7 @@
   height: 50px;
   border: 2px solid black;
   border-radius:50px/30px ;;
-  position: absolute;
-  bottom: -80px;
-  right: 50%;
+  bottom: -86px;
   transform: translateX(-10px) rotate(-5deg);
 }
 .feet > .foot.right{
@@ -494,18 +437,12 @@
   height: 50px;
   border: 2px solid black;
   border-radius: 50px/30px ;
-  position: absolute;
-  bottom: -80px;
-  left: 50%;
+  bottom: -86px;
   transform: translateX(10px) rotate(5deg);
 }
 .hiddenLine{
-  width: 27px;
+  width: 25px;
   height: 0;
   border: 1.5px solid white;
-  position: absolute;
-  left: 50%;
-  bottom: -148px;
-  transform: translateX(-50%);
-  
+  bottom: -152px;
 }
