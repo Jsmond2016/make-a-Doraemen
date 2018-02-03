@@ -5,6 +5,10 @@
 *::before{
   box-sizing: border-box;
 }
+body{
+  position: relative;
+  overflow: hidden;
+}
 .beCircle{
     border-radius: 50%;
 }
